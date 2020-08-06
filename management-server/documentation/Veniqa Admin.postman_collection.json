@@ -1,0 +1,1435 @@
+{
+	"info": {
+		"_postman_id": "3bfeb637-bfcb-4c2a-b09a-7a92e1e777f0",
+		"name": "Veniqa Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"vpandey@ngineerx.com\",\n\t\"password\": \"random\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/security/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/security/forgotPassword?email=vpandey@ngineerx.com",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"forgotPassword"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "vpandey@ngineerx.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validatePasswordResetToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/security/validatePasswordResetToken/f9ee5ab8cbd8ccdc8aff30519bad54615e1b9bfa",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"validatePasswordResetToken",
+								"f9ee5ab8cbd8ccdc8aff30519bad54615e1b9bfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"f9ee5ab8cbd8ccdc8aff30519bad54615e1b9bfa\",\n\t\"newPassword\": \"golang\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/security/resetPassword",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isLoggedIn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/security/isLoggedIn",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"isLoggedIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/security/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"security",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "catalog search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pagingOptions\": {\n\t\t\"page\": 1,\n\t\t\"limit\": 3\n\t},\n\t\"searchTerm\": \"amazon\",\n\t\"sortRule\": \"-auditLog.createdOn -price\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/catalog/search",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\" : \"AMAZON\",\n    \"brand\" : \"BEVERLY HILLS KAY\",\n    \"name\" : \"Amrezy Highlighter\",\n    \"item_url\" : \"https://www.sephora.com/product/ignited-eyeshadow-palette-P439026?icid2=just%20arrived:p439026:product\",\n    \"store_sku\": \"676357\",\n    \"category\" : \"5c45e87fa8ef66002b9e073b\",\n    \"thumbnailUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\",\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/8ebad3add8ef7424eed96cc560c8d135b14f9fb8\"\n    ],\n    \"featuredImageUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\"\n    ],\n    \"detailedImageUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\"\n    ],\n    \"marked_price\" : {\n        \"amount\" : 32.99,\n        \"currency\" : \"USD\"\n    },\n    \"price\" : {\n        \"amount\" : 27.99,\n        \"currency\" : \"USD\"\n    },\n    \"weight\" : {\n        \"quantity\" : 3.2,\n        \"unit\" : \"LB\"\n    },\n    \"tariff\": \"5c3fa15d1106b8b7ae213d77\",\n    \"customizationOptions\": {\n    \t\"customizations\": [\n    \t\t{\n\t    \t\t\"name\": \"Available colors\",\n\t    \t\t\"key\": \"all_colors\",\n\t    \t\t\"type\": \"Colors\",\n\t    \t\t\"values\": [\n\t    \t\t\t{\"name\": \"Black\", \"hexValue\": \"#000000\"},\n\t    \t\t\t{\"name\": \"Brown\", \"hexValue\": \"#435ADF\"}\n\t    \t\t]\n    \t\t},\n    \t\t{\n\t    \t\t\"name\": \"Available sizes\",\n\t    \t\t\"key\": \"all_sizes\",\n\t    \t\t\"type\": \"Array\",\n\t    \t\t\"values\": [\n\t\t\t\t\t\"XS\", \"S\", \"M\", \"L\"\n\t    \t\t]\n    \t\t},\n    \t\t{\n    \t\t\t\"name\": \"Full sleeves?\",\n    \t\t\t\"key\": \"sleeves\",\n    \t\t\t\"type\": \"Toggle\",\n    \t\t\t\"values\": [\n    \t\t\t\t\"Level 1\",\n    \t\t\t\t\"Level 2\"\n    \t\t\t]\n    \t\t}\n    \t]\t\n    },\n    \"custom_attributes\" : {\n        \"color\" : \"light brilliant gold\"\n    },\n    \"details_html\" : \"A limited-edition illuminating powder with an ultra-smooth formula and radiant finish.\",\n    \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{server}}/catalog/addProduct",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/catalog/getProductDetails?productId=5c465b51484bd2148fcfca64",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"getProductDetails"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "5c465b51484bd2148fcfca64"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5c59e7605ef83804adbb94e0\",\n    \"store\" : \"AMAZON\",\n    \"brand\" : \"BEVERLY HILLS KAY\",\n    \"name\" : \"Amrezy Highlighter\",\n    \"item_url\" : \"https://www.sephora.com/product/ignited-eyeshadow-palette-P439026?icid2=just%20arrived:p439026:product\",\n    \"store_sku\": \"674673\",\n    \"category\" : \"5c461c06a8ef66002b9e0740\",\n    \"thumbnailUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\",\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/8ebad3add8ef7424eed96cc560c8d135b14f9fb8\"\n    ],\n    \"featuredImageUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\"\n    ],\n    \"detailedImageUrls\": [\n    \t\"https://s3.amazonaws.com/veniqa-catalog-images/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/910f997478edfa6f1d444169371f1d3149f6113f\"\n    ],\n    \"marked_price\" : {\n        \"amount\" : 39.99,\n        \"currency\" : \"USD\"\n    },\n    \"price\" : {\n        \"amount\" : 37.99,\n        \"currency\" : \"USD\"\n    },\n    \"weight\" : {\n        \"quantity\" : 3.2,\n        \"unit\" : \"LB\"\n    },\n    \"tariff\": \"5c3fa10b1106b8b7ae213d72\",\n    \"customizationOptions\": {\n    \t\"customizations\": [\n    \t\t{\n\t    \t\t\"name\": \"Available colors\",\n\t    \t\t\"key\": \"all_colors\",\n\t    \t\t\"type\": \"Colors\",\n\t    \t\t\"values\": [\n\t    \t\t\t{\"name\": \"Black\", \"hexValue\": \"#000000\"},\n\t    \t\t\t{\"name\": \"Brown\", \"hexValue\": \"#435ADF\"}\n\t    \t\t]\n    \t\t},\n    \t\t{\n\t    \t\t\"name\": \"Available sizes\",\n\t    \t\t\"key\": \"all_sizes\",\n\t    \t\t\"type\": \"Array\",\n\t    \t\t\"values\": [\n\t\t\t\t\t\"XS\", \"S\", \"M\", \"L\"\n\t    \t\t]\n    \t\t},\n    \t\t{\n    \t\t\t\"name\": \"Full sleeves?\",\n    \t\t\t\"key\": \"sleeves\",\n    \t\t\t\"type\": \"Toggle\",\n    \t\t\t\"values\": [\n    \t\t\t\t\"Level 1\",\n    \t\t\t\t\"Level 3\"\n    \t\t\t]\n    \t\t}\n    \t]\t\n    },\n    \"custom_attributes\" : {\n        \"color\" : \"light brilliant gold\"\n    },\n    \"details_html\" : \"A limited-edition illuminating powder with an ultra-smooth formula and radiant finish.\",\n    \"active\": false\n}"
+						},
+						"url": {
+							"raw": "{{server}}/catalog/updateProduct",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"updateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"productId\": \"5c0dc672cdbcb65bc5f1c8e4\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/catalog/deleteProduct",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"deleteProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPresignedUrlsForCatalogImageUploads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/catalog/getPresignedUrlsForCatalogImageUploads?numberOfThumbnailAndDetailedImages=3&numberOfFeaturedImages=2&productId=5c09591be7179a6ca083d15f",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"catalog",
+								"getPresignedUrlsForCatalogImageUploads"
+							],
+							"query": [
+								{
+									"key": "numberOfThumbnailAndDetailedImages",
+									"value": "3"
+								},
+								{
+									"key": "numberOfFeaturedImages",
+									"value": "2"
+								},
+								{
+									"key": "productId",
+									"value": "5c09591be7179a6ca083d15f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImageToPresignedUrl",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "image/png",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://veniqa-catalog-images.s3.amazonaws.com/6948edbc43110f0828169a5119e4f0f88436658c/thumbnails/8ebad3add8ef7424eed96cc560c8d135b14f9fb8?AWSAccessKeyId=AKIAIB2NMUNKWZKQHUDQ&Content-Type=image%2Fpng&Expires=1544403184&Signature=UsLI2wvE4xoMTtr46zJ46%2B45goM%3D",
+							"protocol": "https",
+							"host": [
+								"veniqa-catalog-images",
+								"s3",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"6948edbc43110f0828169a5119e4f0f88436658c",
+								"thumbnails",
+								"8ebad3add8ef7424eed96cc560c8d135b14f9fb8"
+							],
+							"query": [
+								{
+									"key": "AWSAccessKeyId",
+									"value": "AKIAIB2NMUNKWZKQHUDQ"
+								},
+								{
+									"key": "Content-Type",
+									"value": "image%2Fpng"
+								},
+								{
+									"key": "Expires",
+									"value": "1544403184"
+								},
+								{
+									"key": "Signature",
+									"value": "UsLI2wvE4xoMTtr46zJ46%2B45goM%3D"
+								}
+							]
+						},
+						"description": "NOT A VENIQA API, THIS IS ONLY MEANT TO SHOW YOU HOW TO USE THE PRESIGNED URLS FROM THE CLIENT SIDE TO UPLOAD CATALOG IMAGES."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SuperAdmin",
+			"item": [
+				{
+					"name": "createAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"viveckh@hotmail.com\",\n\t\"name\": \"Vivek Pandey\",\n\t\"permissions\": [\"CATALOG_VIEW\", \"ORDER_VIEW\"]\n}"
+						},
+						"url": {
+							"raw": "{{server}}/superAdmin/createAdmin",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"superAdmin",
+								"createAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAdmins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/superAdmin/getAllAdmins",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"superAdmin",
+								"getAllAdmins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdminDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/superAdmin/getAdminDetails?email=viveckh@hotmail.com",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"superAdmin",
+								"getAdminDetails"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "viveckh@hotmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAdminAccess",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"viveckh@hotmail.com\",\n\t\"approved\": false,\n\t\"permissions\": [\"CATALOG_MANAGE\", \"ORDER_VIEW\"]\n}"
+						},
+						"url": {
+							"raw": "{{server}}/superAdmin/updateAdminAccess",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"superAdmin",
+								"updateAdminAccess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAdmin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"viveckh@hotmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/superAdmin/deleteAdmin",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"superAdmin",
+								"deleteAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9f7a24ff-545b-45dd-b2a1-f4801fb85854",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc55e001-f6f4-4d95-820b-7ad80be15ea2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Reference Data",
+			"item": [
+				{
+					"name": "getCatalogBundle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/getCatalogBundle",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"getCatalogBundle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/getStores",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"getStores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRoles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/getRoles",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"getRoles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWeightUnits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/getWeightUnits",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"getWeightUnits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productCategoryList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/productCategoryList",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"productCategoryList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"category\": \"Women's Clothing\",\n\t\"subcategory\": \"Jackets & Coats\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/productCategory",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"productCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/productCategory?categoryId=5c45e46bb720330af113ed50",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"productCategory"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "5c45e46bb720330af113ed50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5c45e46bb720330af113ed50\",\n\t\"category\": \"Women's Clothing\",\n\t\"subcategory\": \"Jackets and Coats\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/productCategory",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"productCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tariffList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/tariffList",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"tariffList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tariff",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Clothes\",\n    \"rates\": {\n        \"Nepal\": 20,\n        \"Bangladesh\": 0\n    }\n}"
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/tariff",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"tariff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tariff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/tariff?tariffId=5c3fa10b1106b8b7ae213d72",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"tariff"
+							],
+							"query": [
+								{
+									"key": "tariffId",
+									"value": "5c3fa10b1106b8b7ae213d72"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tariff",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5c3fa10b1106b8b7ae213d72\",\n   \"name\": \"Clothes\",\n    \"rates\": {\n        \"Nepal\": 22,\n        \"Bangladesh\": 0\n    }\n}"
+						},
+						"url": {
+							"raw": "{{server}}/referenceData/tariff",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"referenceData",
+								"tariff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "orderList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderStatus\": \"RECEIVED\",\n\t\"pagingOptions\": {\n\t\t\"page\": 1,\n\t\t\"limit\": 5\n\t},\n\t\"sortRule\": \"-auditLog.createdOn\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/orderList",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"orderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/orders/order?orderId=5c463c88256e320064761f85",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"order"
+							],
+							"query": [
+								{
+									"key": "orderId",
+									"value": "5c463c88256e320064761f85"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/confirmOrder",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"confirmOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c2ea11b0aad6545e23442d3\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/cancelOrder",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"cancelOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markItemAsFulfilling",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"store\": \"AMAZON\",\n\t\"orderNumber\": \"875884983\",\n\t\"totalCostPriceOfItemUSD\": \"25\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/markItemAsFulfilling",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"markItemAsFulfilling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markItemAsShipped",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"provider\": \"MYUS\",\n\t\"trackingNumber\": \"875884983\",\n\t\"service\": \"Next day\",\n\t\"paidPostageInUSD\": \"15\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/markItemAsShipped",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"markItemAsShipped"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markItemAsDelivered",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"deliveryDate\": \"2015-03-25\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/markItemAsDelivered",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"markItemAsDelivered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderFulfillmentDetails",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"store\": \"AMAZON\",\n\t\"orderNumber\": \"875884993\",\n\t\"totalCostPriceOfItemUSD\": \"25\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/updateOrderFulfillmentDetails",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"updateOrderFulfillmentDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateShipmentDetails",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"provider\": \"MYUS\",\n\t\"trackingNumber\": \"875884993\",\n\t\"service\": \"No Rush Shipping\",\n\t\"paidPostageInUSD\": \"15.99\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/updateShipmentDetails",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"updateShipmentDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDeliveryDetails",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c3919795b42341726eadabb\",\n\t\"cartItemId\": \"5c12e14a2e9266272a8c535c\",\n\t\"deliveryDate\": \"2015-03-27\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/updateDeliveryDetails",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"updateDeliveryDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c2ea11b0aad6545e23442d3\",\n\t\"comment\": \"This customer was a lil more cranky than normal.\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/addComment",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c2ea11b0aad6545e23442d3\",\n\t\"commentId\": \"5c37c426b64e5083cdafb710\",\n\t\"comment\": \"This customer was actually not that bad after few minutes of talking.\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/editComment",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"editComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": \"5c2ea11b0aad6545e23442d3\",\n\t\"commentId\": \"5c37c426b64e5083cdafb710\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/orders/deleteComment",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"orders",
+								"deleteComment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UI",
+			"item": [
+				{
+					"name": "featured",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"section_identifier\",\n\t\"content\": [\n\t\t{\n\t\t\t\"products\": [\"5c63a994c969d8003ec54fde\", \"5c6381e8c969d8003ec54fd9\"],\n\t\t\t\"config\": {\n\t\t\t\t\"anything\": \"you want\"\n\t\t\t}\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{server}}/ui/featured",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ui",
+								"featured"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "featured",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/ui/featured?name=section_identifier",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ui",
+								"featured"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "section_identifier"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "featuredList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/ui/featuredList",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ui",
+								"featuredList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "featured",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"section_identifier\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/ui/featured",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"ui",
+								"featured"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3995122f-6f15-4105-a019-4d7b3483f573",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2345aa3b-6d8b-43ba-a446-28d890486dce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,95 @@
+version: '3'
+services:
+  mongo: 
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile-mongo
+    ports:
+      - 27000:27017
+    volumes:
+      - "dbconfig:/data/configdb"
+      - "dbdata:/data/db"
+
+  redis:
+    image: "redis:alpine"
+    container_name: cache
+
+    command: redis-server --requirepass SOME_PASSWORD
+
+    ports:
+      - 6379:6379
+
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  shopping-server:
+    build:
+      context: ./shopping-server
+      dockerfile: Dockerfile-local
+    volumes:
+      - './shopping-server:/app'
+      - '/app/node_modules'
+    ports:
+      - 4201:3000
+    depends_on: 
+      - mongo
+      - redis
+    environment:
+      NODE_ENV: development
+      VENIQA_ENV: local
+      VENIQA_MONGODB_DB: veniqa-prod-db
+      VENIQA_MONGODB_URL: mongodb://mongo:27017/veniqa-prod-db
+      VENIQA_REDIS_HOST: redis://cache
+      VENIQA_REDIS_PORT: 6379
+      VENIQA_REDIS_PASSWORD: SOME_PASSWORD
+      VENIQA_REDIS_DB_NUMBER: 0
+      VENIQA_SESSION_SECRET_KEY: SECRET_KEY
+      VENIQA_CRYPTO_SECRET_KEY: CRYPTO_SECRET
+
+  management-server:
+    build:
+      context: ./management-server
+      dockerfile: Dockerfile-local
+    volumes:
+      - './management-server:/app'
+      - '/app/node_modules'
+    ports:
+      - 4202:3000
+    depends_on: 
+      - mongo
+      - redis
+    environment:
+      NODE_ENV: development
+      VENIQA_ENV: local
+      VENIQA_MONGODB_DB: veniqa-prod-db
+      VENIQA_MONGODB_URL: mongodb://mongo:27017/veniqa-prod-db
+      VENIQA_REDIS_HOST: redis://cache
+      VENIQA_REDIS_PORT: 6379
+      VENIQA_REDIS_PASSWORD: SOME_PASSWORD
+      VENIQA_REDIS_DB_NUMBER: 1
+      VENIQA_SESSION_SECRET_KEY: SECRET_KEY
+      VENIQA_CRYPTO_SECRET_KEY: CRYPTO_SECRET
+
+  shopping-webclient:
+    build:
+      context: ./shopping-webclient
+      dockerfile: Dockerfile-local
+    volumes:
+      - './shopping-webclient:/app'
+      - '/app/node_modules'
+    ports:
+      - 5201:5201
+    
+  management-webclient:
+    build:
+      context: ./management-webclient
+      dockerfile: Dockerfile-local
+    volumes:
+      - './management-webclient:/app'
+      - '/app/node_modules'
+    ports:
+      - 5202:5202
+
+volumes:
+  dbdata:
+  dbconfig:
