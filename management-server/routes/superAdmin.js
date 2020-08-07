@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Veniqa Bossman' });
+  res.render('index', { title: 'jesEcom Bossman' });
 });
 
 router.use(passportAuth.isAuthenticated);

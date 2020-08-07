@@ -15,43 +15,43 @@ KEY2=Value2
 #### MongoDB Credentials
 |Environment Variable               |Description                        |Example Value        
 |---                                |---                                |---                         
-|VENIQA_MONGODB_DB                  |MongoDB database name              |VeniqaDB
-|VENIQA_MONGODB_URL                 |MongoDB connection url             |mongodb://&lt;user&gt;:&lt;password&gt;@&lt;base_url&gt;:&lt;port&gt;/&lt;db_name&gt;
-|VENIQA_MONGODB_USER                |Database user with full access     |veniqa-dev
-|VENIQA_MONGODB_PASSWORD            |Password                           |1RGjhGTead
+|jesEcom_MONGODB_DB                  |MongoDB database name              |jesEcomDB
+|jesEcom_MONGODB_URL                 |MongoDB connection url             |mongodb://&lt;user&gt;:&lt;password&gt;@&lt;base_url&gt;:&lt;port&gt;/&lt;db_name&gt;
+|jesEcom_MONGODB_USER                |Database user with full access     |jesEcom-dev
+|jesEcom_MONGODB_PASSWORD            |Password                           |1RGjhGTead
 
 ---
 
 #### Redis Credentials
 |Environment Variable               |Description                    |Example Value        
 |---                                |---                            |---                         
-|VENIQA_REDIS_HOST                  |-                              |veniqa-cache.redis.cache.windows.net
-|VENIQA_REDIS_PORT                  |-                              |6380  
-|VENIQA_REDIS_PASSWORD              |-                              |AEyEmsndKD
-|VENIQA_REDIS_DB_NUMBER             |Recommended value is `0`       |0
+|jesEcom_REDIS_HOST                  |-                              |jesEcom-cache.redis.cache.windows.net
+|jesEcom_REDIS_PORT                  |-                              |6380  
+|jesEcom_REDIS_PASSWORD              |-                              |AEyEmsndKD
+|jesEcom_REDIS_DB_NUMBER             |Recommended value is `0`       |0
 
 ---
 
 #### AWS Credentials
 |Environment Variable               |Description               
 |---                                |---                                                                         
-|VENIQA_AWS_ACCESS_KEY_ID           |Programmatic Access Key with S3FullAccess rights. DO NOT USE ROOT USER CREDS
-|VENIQA_AWS_SECRET_ACCESS_KEY       |Secret Key
+|jesEcom_AWS_ACCESS_KEY_ID           |Programmatic Access Key with S3FullAccess rights. DO NOT USE ROOT USER CREDS
+|jesEcom_AWS_SECRET_ACCESS_KEY       |Secret Key
 
 ---
 
 #### Payment Services API Keys
 |Environment Variable               |Description                                    
 |---                                |---                                                                      
-|VENIQA_STRIPE_API_KEY              |API Key for Stripe Payment Service               
-|VENIQA_KHALTI_API_KEY              |Put in `NA` as value if you have not heard of Khalti before
+|jesEcom_STRIPE_API_KEY              |API Key for Stripe Payment Service               
+|jesEcom_KHALTI_API_KEY              |Put in `NA` as value if you have not heard of Khalti before
 
 ---
 
 #### Sendgrid API Key
 |Environment Variable               |Description        
 |---                                |---                              
-|VENIQA_SENDGRID_API_KEY            |API Key for SendGrid email service
+|jesEcom_SENDGRID_API_KEY            |API Key for SendGrid email service
 
 ---
 
@@ -60,17 +60,17 @@ KEY2=Value2
 
 |Environment Variable                   |Description                                                        |Example Value        
 |---                                    |---                                                                |---              
-|VENIQA_NODEMAILER_HOST                 |Service Provider Domain                                            |veniqa.com
-|VENIQA_NODEMAILER_PORT                 |`465` if SSL enabled domain, `587` otherwise                       |465
-|VENIQA_NODEMAILER_SECURE               |`true` if SSL enabled |`true` or `false`                           |`true`
-|VENIQA_NODEMAILER_USER                 |Email address to use                                               |info@veniqa.com
-|VENIQA_NODEMAILER_PASSWORD             |Password of the email address                                      |GPgEYv5un3
-|VENIQA_NODEMAILER_REJECT_UNAUTHORIZED  |`false` if VENIQA_NODEMAILER_SECURE is `true`, `false` otherwise   |`false`
+|jesEcom_NODEMAILER_HOST                 |Service Provider Domain                                            |jesEcom.com
+|jesEcom_NODEMAILER_PORT                 |`465` if SSL enabled domain, `587` otherwise                       |465
+|jesEcom_NODEMAILER_SECURE               |`true` if SSL enabled |`true` or `false`                           |`true`
+|jesEcom_NODEMAILER_USER                 |Email address to use                                               |info@jesEcom.com
+|jesEcom_NODEMAILER_PASSWORD             |Password of the email address                                      |GPgEYv5un3
+|jesEcom_NODEMAILER_REJECT_UNAUTHORIZED  |`false` if jesEcom_NODEMAILER_SECURE is `true`, `false` otherwise   |`false`
 
 ---
 
 #### Secret Hash Keys
 |Environment Variable               |Description                                |Example Value            
 |---                                |---                                        |---
-|VENIQA_CRYPTO_SECRET_KEY           |Secret key used to generate tokens         |0FADTgBHzY
-|VENIQA_SESSION_SECRET_KEY          |Secret key to generate session tokens      |Mk9pZ2Adth
+|jesEcom_CRYPTO_SECRET_KEY           |Secret key used to generate tokens         |0FADTgBHzY
+|jesEcom_SESSION_SECRET_KEY          |Secret key to generate session tokens      |Mk9pZ2Adth

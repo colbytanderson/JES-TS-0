@@ -3,8 +3,8 @@
         "country": "Bangladesh",
         "shipping_options": [
             {
-                "id": "veniqa_bd_expedited",
-                "name": "Veniqa Expedited",
+                "id": "jesEcom_bd_expedited",
+                "name": "jesEcom Expedited",
                 "summary": "7-10 days",
                 "maximum_days": 10,
                 "shipping_providers": [
@@ -24,8 +24,8 @@
                 }
             },
             {
-                "id": "veniqa_bd_priority",
-                "name": "Veniqa Priority",
+                "id": "jesEcom_bd_priority",
+                "name": "jesEcom Priority",
                 "summary": "15-20 days",
                 "maximum_days": 20,
                 "shipping_providers": [
@@ -45,8 +45,8 @@
                 }
             },
             {
-                "id": "veniqa_bd_economy",
-                "name": "Veniqa Budget Economy",
+                "id": "jesEcom_bd_economy",
+                "name": "jesEcom Budget Economy",
                 "summary": "25-30 days",
                 "maximum_days": 30,
                 "shipping_providers": [
@@ -71,8 +71,8 @@
         "country": "Nepal",
         "shipping_options": [
             {
-                "id": "veniqa_npl_expedited",
-                "name": "Veniqa Expedited",
+                "id": "jesEcom_npl_expedited",
+                "name": "jesEcom Expedited",
                 "summary": "7-10 days",
                 "maximum_days": 10,
                 "shipping_providers": [
@@ -92,8 +92,8 @@
                 }
             },
             {
-                "id": "veniqa_npl_priority",
-                "name": "Veniqa Priority",
+                "id": "jesEcom_npl_priority",
+                "name": "jesEcom Priority",
                 "summary": "15-20 days",
                 "maximum_days": 20,
                 "shipping_providers": [
@@ -113,8 +113,8 @@
                 }
             },
             {
-                "id": "veniqa_npl_economy",
-                "name": "Veniqa Budget Economy",
+                "id": "jesEcom_npl_economy",
+                "name": "jesEcom Budget Economy",
                 "summary": "25-30 days",
                 "maximum_days": 30,
                 "shipping_providers": [

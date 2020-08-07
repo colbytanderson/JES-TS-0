@@ -1,5 +1,5 @@
 export default {
-  baseUrl: 'http://veniqa-client-server-dev.azurewebsites.net/',
+  baseUrl: 'http://jesEcom-client-server-dev.azurewebsites.net/',
   registerUrl: '/security/signup',
   loginUrl: '/security/login',
   logoutUrl: '/security/logout',

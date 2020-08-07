@@ -1,14 +1,14 @@
 {
     "server_port": 3000,
     "mongodb_collections": {
-        "users": "veniqa_users",
-        "curated_products": "veniqa_curated_products",
-        "checkouts": "veniqa_checkouts",
-        "orders": "veniqa_orders",
-        "exchange_rates": "veniqa_currency_exchange_rates",
-        "tariff_rates": "veniqa_tariff_rates",
-        "product_categories": "veniqa_product_categories",
-        "ui_featured_sections": "veniqa_ui_featured_sections"
+        "users": "jesEcom_users",
+        "curated_products": "jesEcom_curated_products",
+        "checkouts": "jesEcom_checkouts",
+        "orders": "jesEcom_orders",
+        "exchange_rates": "jesEcom_currency_exchange_rates",
+        "tariff_rates": "jesEcom_tariff_rates",
+        "product_categories": "jesEcom_product_categories",
+        "ui_featured_sections": "jesEcom_ui_featured_sections"
     },
     "mongodb_settings": {
         "use_new_url_parser": true,
@@ -19,22 +19,22 @@
         "max_age": 1800000
     },
     "allowed_origins": [
-        "https://www.veniqa.com", 
-        "https://veniqa.com",
-        "https://shop.veniqa.com"
+        "https://www.jesEcom.com", 
+        "https://jesEcom.com",
+        "https://shop.jesEcom.com"
     ],
     "token_validity": {
         "password_reset_token_valid_for": 3600000
     },
     "logging": {
-        "mongodb_collection": "veniqa_client_server_error_log",
+        "mongodb_collection": "jesEcom_client_server_error_log",
         "combined_log_file_name": "combined.log",
         "error_log_file_name": "error.log",
         "exception_log_file_name": "exceptions.log"
     },
     "frontend_urls": {
-        "email_confirmation_base_url": "https://shop.veniqa.com/#/email-confirmation",
-        "password_reset_base_url": "https://shop.veniqa.com/#/password-reset"
+        "email_confirmation_base_url": "https://shop.jesEcom.com/#/email-confirmation",
+        "password_reset_base_url": "https://shop.jesEcom.com/#/password-reset"
     },
     "sendgrid": {
         "templates": {

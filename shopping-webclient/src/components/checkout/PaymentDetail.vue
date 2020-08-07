@@ -35,7 +35,7 @@ export default {
       stripeKey: Config.STRIPE_KEY,
       khaltiConfig: {
         productIdentity: '0000',
-        productName: 'Veniqa',
+        productName: 'jesEcom',
         key: Config.KHALTI_KEY,
       },
     };
@@ -55,7 +55,7 @@ export default {
         this.$router.push(`/orders/${data.order_id}`);
         notification.success(this, 'Payment was successful.');
       } catch (error) {
-        console.log('Error with Veniqa payment', error);
+        console.log('Error with jesEcom payment', error);
         notification.error(
           this,
           'Payment could not be completed at the moment',
@@ -76,7 +76,7 @@ export default {
         this.$router.push(`/orders/${data.order_id}`);
         notification.success(this, 'Payment was successful.');
       } catch (error) {
-        console.log('Error with Veniqa payment', error);
+        console.log('Error with jesEcom payment', error);
         notification.error(
           this,
           'Payment could not be completed at the moment',

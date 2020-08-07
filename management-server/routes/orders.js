@@ -6,7 +6,7 @@ var router = express.Router();
 router.use(passportAuth.isAuthenticated);
 
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa Orders' });
+    res.render('index', { title: 'jesEcom Orders' });
 });
 
 router.post('/orderList', passportAuth.canViewOrders, orderController.getOrderList);

@@ -2,15 +2,15 @@ import sendgridMail from '@sendgrid/mail';
 import config from 'config';
 import logger from '../logging/logger';
 import * as _ from 'lodash';
-sendgridMail.setApiKey(process.env.VENIQA_SENDGRID_API_KEY);
+sendgridMail.setApiKey(process.env.jesEcom_SENDGRID_API_KEY);
 
 export default {
     emailEmailConfirmationInstructions(email, name, token) {
         // setup email data
         let mailOptions = {
-            from: '"Veniqa Support" <support@veniqa.com>', // sender address
+            from: '"jesEcom Support" <support@jesEcom.com>', // sender address
             to: email, // list of receivers
-            subject: 'Welcome to Veniqa - Please Confirm Your Email', // Subject line
+            subject: 'Welcome to jesEcom - Please Confirm Your Email', // Subject line
             html: '<b>Hi </b>' +  name + '<br>Please click the link below to confirm your email address<br><br><button><a href="' + config.get('frontend_urls.email_confirmation_base_url') + '/' + token + '">Confirm Your Email Address</a></button>',
             templateId: config.get('sendgrid.templates.confirm_account_customer'),
             dynamic_template_data: {
@@ -25,9 +25,9 @@ export default {
     emailPasswordResetInstructions(email, name, token) {
         // setup email data with unicode symbols
         let mailOptions = {
-            from: '"Veniqa Support" <support@veniqa.com>', // sender address
+            from: '"jesEcom Support" <support@jesEcom.com>', // sender address
             to: email, // list of receivers
-            subject: 'Veniqa - Password Reset', // Subject line
+            subject: 'jesEcom - Password Reset', // Subject line
             html: '<b>Hi </b>' +  name + '<br>Please click the link below to reset your password<br><br><button><a href="' + config.get('frontend_urls.password_reset_base_url') + '/' + token + '">Reset Password</a></button>',
             templateId: config.get('sendgrid.templates.reset_password_customer'),
             dynamic_template_data: {
@@ -43,9 +43,9 @@ export default {
     emailPasswordResetConfirmation(email, name) {
         // setup email data with unicode symbols
         let mailOptions = {
-            from: '"Veniqa Support" <support@veniqa.com>', // sender address
+            from: '"jesEcom Support" <support@jesEcom.com>', // sender address
             to: email, // list of receivers
-            subject: 'Veniqa - Password Reset Successful', // Subject line
+            subject: 'jesEcom - Password Reset Successful', // Subject line
             html: '<b>Hi </b>' +  name + '<br>Your password has been successfully reset.<br><br>',
             templateId: config.get('sendgrid.templates.confirmation_password_reset_customer'),
             dynamic_template_data: {
@@ -61,9 +61,9 @@ export default {
 
         // setup email data with unicode symbols
         let mailOptions = {
-            from: '"Veniqa Support" <support@veniqa.com>', // sender address
+            from: '"jesEcom Support" <support@jesEcom.com>', // sender address
             to: condensedOrderObj.user_email, // list of receivers
-            subject: 'Veniqa - Order Received', // Subject line
+            subject: 'jesEcom - Order Received', // Subject line
             html: '<b>Hi </b>' + '<br>We have received your order.<br><br>',
             templateId: config.get('sendgrid.templates.order_received'),
             dynamic_template_data: condensedOrderObj

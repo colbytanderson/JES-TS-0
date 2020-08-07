@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET ORDERS Endpoint. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa Orders' });
+    res.render('index', { title: 'jesEcom Orders' });
 });
 
 router.use(passportAuth.isAuthenticated);

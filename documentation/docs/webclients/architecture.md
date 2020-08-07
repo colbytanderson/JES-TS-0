@@ -78,15 +78,15 @@ All of the applications typically have 3 environment setups:
 2. **QA Environment**: This is the environment for the QA to test all the features and fixes.
 3. **Production Environment**: This is the environment for the customers to access. Usually, after QA approves the features, it goes into production.
 
-Veniqa UI applications are also configured to be friendly with the build and deployment process for various environments. In the root directory, you will find `.env` files. They simply represent what environment variables to load for the different environments.
+jesEcom UI applications are also configured to be friendly with the build and deployment process for various environments. In the root directory, you will find `.env` files. They simply represent what environment variables to load for the different environments.
 
-In Veniqa, we have 3:
+In jesEcom, we have 3:
 
 - `.env`
 - `.env.dev`
 - `.env.prod`
 
-You can put your environment variables based on which environment you want to run the variable in. For example, in Veniqa, we need `VUE_APP_API_BASE_URL` for the API calls to make. For every environment (dev/qa/prod), they would have separate API endpoints. So, you can enter this info here.
+You can put your environment variables based on which environment you want to run the variable in. For example, in jesEcom, we need `VUE_APP_API_BASE_URL` for the API calls to make. For every environment (dev/qa/prod), they would have separate API endpoints. So, you can enter this info here.
 
 During the build, you should run `npm run build --mode=prod` if you would like to use `.env.prod` environment variables throughout the application.
 

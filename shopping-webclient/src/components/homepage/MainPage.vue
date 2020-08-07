@@ -53,7 +53,7 @@ export default {
 .designs{
   margin-bottom: 1rem;
 }
-.veniqa-button:hover {
+.jesEcom-button:hover {
   background-color: $pitch-black;
   border: 2px solid $pitch-black;
 }

@@ -1,19 +1,19 @@
 {
-    "name": "veniqa",
+    "name": "jesEcom",
     "version": "2.3.0",
     "private": false,
     "description": "An E-commerce solution",
     "bugs": {
-      "url": "https://github.com/Viveckh/Veniqa/issues"
+      "url": "https://github.com/Viveckh/jesEcom/issues"
     },
-    "author": "(EJ) Vivek Pandey <vpandey+veniqa@ramapo.edu>",
+    "author": "(EJ) Vivek Pandey <vpandey+jesEcom@ramapo.edu>",
     "contributors": [
-        "Arjun Bastola <abastola+veniqa@ramapo.edu>",
-        "Vivek Pandey <vpandey+veniqa@ramapo.edu>",
-        "Sujil Maharjan <maharjansujil+veniqa@ramapo.edu>"
+        "Arjun Bastola <abastola+jesEcom@ramapo.edu>",
+        "Vivek Pandey <vpandey+jesEcom@ramapo.edu>",
+        "Sujil Maharjan <maharjansujil+jesEcom@ramapo.edu>"
     ],
     "keywords": [
-      "Veniqa",
+      "jesEcom",
       "e-commerce solution",
       "e-commerce",
       "fashion",
@@ -27,7 +27,7 @@
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/Viveckh/Veniqa"
+      "url": "https://github.com/Viveckh/jesEcom"
     }
   }
   

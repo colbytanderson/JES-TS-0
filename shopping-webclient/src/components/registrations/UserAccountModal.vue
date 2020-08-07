@@ -5,12 +5,7 @@
         <div class="account-table">
           <div class="account-body">
             <div class="account-content image">
-              <img
-                @click="$router.push('/')"
-                src="./../../assets/transparent-logo.png"
-                alt="Logo"
-                width="200px"
-              >
+              <p>jesEcom</p>
             </div>
           </div>
           <div class="account-body">

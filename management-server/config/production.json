@@ -1,12 +1,12 @@
 {
     "mongodb_collections": {
-        "admins": "veniqa_admins",
-        "curated_products": "veniqa_curated_products",
-        "orders": "veniqa_orders",
-        "exchange_rates": "veniqa_currency_exchange_rates",
-        "tariff_rates": "veniqa_tariff_rates",
-        "product_categories": "veniqa_product_categories",
-        "ui_featured_sections": "veniqa_ui_featured_sections"
+        "admins": "jesEcom_admins",
+        "curated_products": "jesEcom_curated_products",
+        "orders": "jesEcom_orders",
+        "exchange_rates": "jesEcom_currency_exchange_rates",
+        "tariff_rates": "jesEcom_tariff_rates",
+        "product_categories": "jesEcom_product_categories",
+        "ui_featured_sections": "jesEcom_ui_featured_sections"
     },
     "mongodb_settings": {
         "use_new_url_parser": true,
@@ -17,24 +17,24 @@
         "max_age": 1800000
     },
     "allowed_origins": [
-        "https://admin.veniqa.com"
+        "https://admin.jesEcom.com"
     ],
     "token_validity": {
         "password_reset_token_valid_for": 3600000
     },
     "logging": {
-        "mongodb_collection": "veniqa_admin_server_error_log",
+        "mongodb_collection": "jesEcom_admin_server_error_log",
         "combined_log_file_name": "combined.log",
         "error_log_file_name": "error.log",
         "exception_log_file_name": "exceptions.log"
     },
     "frontend_urls": {
-        "password_reset_base_url": "https://admin.veniqa.com/#/password-reset"
+        "password_reset_base_url": "https://admin.jesEcom.com/#/password-reset"
     },
     "aws_settings": {
         "s3": {
             "buckets": {
-                "catalog_image_bucket": "veniqa-catalog-images"
+                "catalog_image_bucket": "jesEcom-catalog-images"
             },
             "s3_resource_live_base_url": "https://s3.amazonaws.com",
             "presigned_url_expires_in": 600

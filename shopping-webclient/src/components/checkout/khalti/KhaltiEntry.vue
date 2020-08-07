@@ -74,7 +74,7 @@ export default {
           : 'Drogon',
         productUrl: this.config.productUrl
           ? this.config.productUrl
-          : 'https://www.veniqa.com',
+          : 'https://www.jesEcom.com',
         eventHandler: {
           onSuccess(payload) {
             // hit merchant api for initiating verfication

@@ -52,7 +52,7 @@
             Due to the unconventional shipping methods, we cannot process direct returns on international orders.
             If there is any severe damage to the product, then please contact us. <br> <br>
 
-            <a href="mailto:support@veniqa.com">support@veniqa.com</a>
+            <a href="mailto:support@jesEcom.com">support@jesEcom.com</a>
           </div>
         </b-col>
       </b-row>

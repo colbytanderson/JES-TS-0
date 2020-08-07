@@ -1,3 +1,3 @@
-## Veniqa Shopping Webclient
+## jesEcom Shopping Webclient
 
-For Documentation, Refer to [Wiki](https://github.com/Viveckh/Veniqa/wiki).
+For Documentation, Refer to [Wiki](https://github.com/Viveckh/jesEcom/wiki).

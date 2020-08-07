@@ -8,7 +8,7 @@ var cluster = require('cluster'); // for clustering
 const numCPUs = require('os').cpus().length; // for clustering
 
 var app = require('../app');
-var debug = require('debug')('veniqa-server:server');
+var debug = require('debug')('jesEcom-server:server');
 var http = require('http');
 
 /**

@@ -4,8 +4,8 @@ import config from 'config';
 
 // Configure and authenticate with AWS
 AWS.config.update({
-    accessKeyId: process.env.VENIQA_AWS_ACCESS_KEY_ID, 
-    secretAccessKey: process.env.VENIQA_AWS_SECRET_ACCESS_KEY, 
+    accessKeyId: process.env.jesEcom_AWS_ACCESS_KEY_ID, 
+    secretAccessKey: process.env.jesEcom_AWS_SECRET_ACCESS_KEY, 
     region: config.get('aws_settings.default_region')
 });
 

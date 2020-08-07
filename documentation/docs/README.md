@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/veniqa_logo_transparent.png
+heroImage: /img/jesEcom_logo_transparent.png
 heroText: Official Documentation
 tagline: Open-source E-commerce Solution
 actionText: Get Started →
@@ -15,25 +15,25 @@ features:
 footer: MIT Licensed | Copyright © 2019-present Qarece New York
 ---
 
-# Veniqa Open-Source E-commerce Solution
+# jesEcom Open-Source E-commerce Solution
 
-Veniqa (Originally Veniqa New York) was a New York-based fashion retail startup that served consumers in South Asian countries to shop from luxury western brands.
+jesEcom (Originally jesEcom New York) was a New York-based fashion retail startup that served consumers in South Asian countries to shop from luxury western brands.
 
-Upon its demise due to logistical complications, the tech platform that powered Veniqa was open-sourced as a 100% customizable framework under the MIT License.
+Upon its demise due to logistical complications, the tech platform that powered jesEcom was open-sourced as a 100% customizable framework under the MIT License.
 
 It is developed and maintained by [Qarece New York](https://qarece.com), which shares some of the same co-founders.
 
 ___
 
 ## Official Website For Details And Demos
-[https://veniqa.com](https://veniqa.com)
+[https://jesEcom.com](https://jesEcom.com)
 
 ---
 
 ## Perfect For Boostrapped Startups & Hacky Engineers
 We love Woocommerce & Squarespace! But vendor lock-in and zero code access isn't for everyone.
 
-With Veniqa, you have choices.
+With jesEcom, you have choices.
 * Launch yourself
 * Get a premium support package
 * Use the codebase for other projects
@@ -41,27 +41,27 @@ With Veniqa, you have choices.
 ---
 
 ## The Suite
-* API Server for Shopping Applications | [Code](https://github.com/Viveckh/Veniqa/tree/master/shopping-server)
-* API Server for Management Applications | [Code](https://github.com/Viveckh/Veniqa/tree/master/management-server)
-* Web Client for Shoppers: | [Code](https://github.com/Viveckh/Veniqa/tree/master/shopping-webclient)
-* Web Client for Management: | [Code](https://github.com/Viveckh/Veniqa/tree/master/management-webclient)
+* API Server for Shopping Applications | [Code](https://github.com/Viveckh/jesEcom/tree/master/shopping-server)
+* API Server for Management Applications | [Code](https://github.com/Viveckh/jesEcom/tree/master/management-server)
+* Web Client for Shoppers: | [Code](https://github.com/Viveckh/jesEcom/tree/master/shopping-webclient)
+* Web Client for Management: | [Code](https://github.com/Viveckh/jesEcom/tree/master/management-webclient)
 
 ---
 
 ## Demo
-### [Shoppers](https://shop.veniqa.com)
+### [Shoppers](https://shop.jesEcom.com)
 *Responsive across all devices*
 
 Feel free to sign up and checkout using dummy credit card `4242 4242 4242 4242`.
 
-### [Admin](https://admin.veniqa.com)
+### [Admin](https://admin.jesEcom.com)
 *Currently only responsive for laptop and tablet view*
 
 Any edit attempts made in demo admin panel are blocked, and will fail.
 
 **Demo Credentials**
 
-**Email:** veniqademo@gmail.com
+**Email:** jesEcomdemo@gmail.com
 
 **Password:** pass$12
 

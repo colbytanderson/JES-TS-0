@@ -51,18 +51,18 @@ db.dbConnection();
 var redisClient = null;
 
 if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
-  redisClient = redis.createClient(process.env.VENIQA_REDIS_HOST);
+  redisClient = redis.createClient(process.env.jesEcom_REDIS_HOST);
 }
 else {
   redisClient = redis.createClient({
-    host: process.env.VENIQA_REDIS_HOST, 
-    port: process.env.VENIQA_REDIS_PORT, 
-    password: process.env.VENIQA_REDIS_PASSWORD, 
-    db: Number(process.env.VENIQA_REDIS_DB_NUMBER),
+    host: process.env.jesEcom_REDIS_HOST, 
+    port: process.env.jesEcom_REDIS_PORT, 
+    password: process.env.jesEcom_REDIS_PASSWORD, 
+    db: Number(process.env.jesEcom_REDIS_DB_NUMBER),
     tls: {
-      host: process.env.VENIQA_REDIS_HOST,
-      port: process.env.VENIQA_REDIS_PORT,
-      servername: process.env.VENIQA_REDIS_HOST
+      host: process.env.jesEcom_REDIS_HOST,
+      port: process.env.jesEcom_REDIS_PORT,
+      servername: process.env.jesEcom_REDIS_HOST
     }
   });
 }
@@ -95,20 +95,20 @@ app.use(session({
     return uuidv4() // Use UUIDs for session IDs
   },
   store: new RedisStore({
-    host: process.env.VENIQA_REDIS_HOST, 
-    port: process.env.VENIQA_REDIS_PORT, 
-    pass: process.env.VENIQA_REDIS_PASSWORD, 
-    db: Number(process.env.VENIQA_REDIS_DB_NUMBER),
+    host: process.env.jesEcom_REDIS_HOST, 
+    port: process.env.jesEcom_REDIS_PORT, 
+    pass: process.env.jesEcom_REDIS_PASSWORD, 
+    db: Number(process.env.jesEcom_REDIS_DB_NUMBER),
     client: redisClient
   }),
-  secret: process.env.VENIQA_SESSION_SECRET_KEY,
+  secret: process.env.jesEcom_SESSION_SECRET_KEY,
   resave: false,  // setting true forces a resave in store even if session not changed
   rolling: true,  // setting true updates expiration with maxAge after every user request
   saveUninitialized: true,  // setting true saves even unmodified sessions
   cookie: {
     httpOnly: true,
     maxAge: config.get('session.max_age')
-    // secure: true, // Set this to true only after veniqa has a ssl enabled site
+    // secure: true, // Set this to true only after jesEcom has a ssl enabled site
   }
 }))
 

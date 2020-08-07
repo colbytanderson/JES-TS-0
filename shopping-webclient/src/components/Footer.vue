@@ -11,7 +11,7 @@
           </b-col>
           <b-col class="align-left center-sm">
             <b-button
-              class="subscribe-button veniqa-button dark"
+              class="subscribe-button jesEcom-button dark"
               @click="subscribeClicked()"
             >Subscribe</b-button>
           </b-col>
@@ -26,7 +26,7 @@
             <br>
             <a>Terms and Condition</a>
           </b-col>
-          <b-col md="4">@2019 Veniqa</b-col>
+          <b-col md="4">@2019 jesEcom</b-col>
           <b-col class="align-right center-sm" md="4">
             <a>Facebook</a>
             <br>

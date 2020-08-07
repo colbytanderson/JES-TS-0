@@ -31,7 +31,7 @@ const logger = winston.createLogger({
     }),
     new winston.transports.MongoDB({ 
       level: 'error',
-      db: process.env.VENIQA_MONGODB_URL,
+      db: process.env.jesEcom_MONGODB_URL,
       options: {useNewUrlParser: true},
       collection: config.get('logging.mongodb_collection'),
       capped: false

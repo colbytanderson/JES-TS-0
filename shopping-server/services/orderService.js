@@ -236,8 +236,8 @@ export default {
                 metadata: {
                     user_email: userObj.email
                 },
-                description: "Veniqa Order " + checkoutId.substr(checkoutId.length - 6), // Last six chars of id
-                statement_descriptor: "Veniqa Order " + checkoutId.substr(checkoutId.length - 6)
+                description: "jesEcom Order " + checkoutId.substr(checkoutId.length - 6), // Last six chars of id
+                statement_descriptor: "jesEcom Order " + checkoutId.substr(checkoutId.length - 6)
             });
 
 

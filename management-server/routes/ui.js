@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET UI Customizations Endpoint. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa User Interface Customizations' });
+    res.render('index', { title: 'jesEcom User Interface Customizations' });
 });
 
 router.use(passportAuth.isAuthenticated);

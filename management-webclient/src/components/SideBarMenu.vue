@@ -5,7 +5,7 @@
       <aside class="menu-sidebar2">
         <div class="logo">
           <a href="#">
-            <img src="./../assets/logo.png" alt="Cool Admin" />
+            <p>jesEcom</p>
           </a>
         </div>
         <div class="menu-sidebar2__content js-scrollbar1">

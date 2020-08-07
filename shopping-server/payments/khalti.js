@@ -13,7 +13,7 @@ export default {
             
             // Preparing the config with authorization headers
             let khaltiConfig = {
-                headers: { Authorization: 'Key ' + process.env.VENIQA_KHALTI_API_KEY }
+                headers: { Authorization: 'Key ' + process.env.jesEcom_KHALTI_API_KEY }
             };
         
             // Make the API request to Khalti

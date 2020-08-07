@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 // Set environment variables
 if (process.env.NODE_ENV == 'production') {
-    if (process.env.VENIQA_ENV == 'aws' || process.env.VENIQA_ENV == 'azure') {
+    if (process.env.jesEcom_ENV == 'aws' || process.env.jesEcom_ENV == 'azure') {
         // Do nothing, all the env variables should be availed separately to aws/azure
     }
     else {
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV == 'production') {
     }
 }
 else {
-    if (process.env.VENIQA_ENV == 'aws' || process.env.VENIQA_ENV == 'azure') {
+    if (process.env.jesEcom_ENV == 'aws' || process.env.jesEcom_ENV == 'azure') {
         // Do nothing, all the env variables should be availed separately to aws/azure
     }
     else {

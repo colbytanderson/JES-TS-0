@@ -1,6 +1,6 @@
 # Servers Setup
 
-The following are the set of infrastructures that the Veniqa platform needs to run. You will need them set up before you hop to configuring the server. We hate this part too :/ but trust us, this is a small price to pay compared to spending months to build the platform from the ground up.
+The following are the set of infrastructures that the jesEcom platform needs to run. You will need them set up before you hop to configuring the server. We hate this part too :/ but trust us, this is a small price to pay compared to spending months to build the platform from the ground up.
 
 * 1 MongoDB Database
     * Recommended: Try out mLab or MongoAtlas since they give out free sandboxes for up to 500MB storage which is more than enough for your prototyping
@@ -26,7 +26,7 @@ So, pick what suits you best and use that in the upcoming steps.
 |ENVIRONMENT VARIABLE   |VALID VALUES               |DEFAULT        
 |---                    |---                        |---                         
 |NODE_ENV               |development, production    |development    
-|VENIQA_ENV             |aws, azure, local          |local         
+|jesEcom_ENV             |aws, azure, local          |local         
 
 ---
 
@@ -42,21 +42,21 @@ Depending on how you are planning on running the servers, complete the appropria
 
 ### Local Mode
 
-* NODE_ENV=development and VENIQA_ENV=local 
+* NODE_ENV=development and jesEcom_ENV=local 
     * Sensitive creds: a completed `.env.development` file which follows the format of `.env.format` file and is placed at the same directory level
     * Backend config: `config/default.json`
 
-* NODE_ENV=production and VENIQA_ENV=local
+* NODE_ENV=production and jesEcom_ENV=local
     * Sensitive creds: a completed `.env.production` file which follows the format of `.env.format` file and is placed at the same directory level
     * Backend config: `config/production.json`
 
 ### Cloud Mode
 
-* NODE_ENV=development and VENIQA_ENV=aws or azure
+* NODE_ENV=development and jesEcom_ENV=aws or azure
     * Sensitive creds: it is expected that you load the keys outlined in `env.format` with values to the environment variables 
     * Backend config: `config/default.json`
 
-* NODE_ENV=production and VENIQA_ENV=aws or azure
+* NODE_ENV=production and jesEcom_ENV=aws or azure
     * Sensitive creds: it is expected that you load the keys outlined in `env.format` with values to the environment variables
     * Backend config: `config/production.json`
 
@@ -66,10 +66,10 @@ Depending on how you are planning on running the servers, complete the appropria
 
 ### Development Mode
 
-`NODE_ENV=development VENIQA_ENV=your_choice_here npm run devstart`
+`NODE_ENV=development jesEcom_ENV=your_choice_here npm run devstart`
 
 ### Production Mode
 
-`NODE_ENV=production VENIQA_ENV=your_choice_here npm run start`
+`NODE_ENV=production jesEcom_ENV=your_choice_here npm run start`
 
 

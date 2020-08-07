@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET UI Customziations Endpoint. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa User Interface Customizations' });
+    res.render('index', { title: 'jesEcom User Interface Customizations' });
 });
 
 router.get('/featured', uiController.getFeaturedSection);

@@ -12,7 +12,7 @@
             :href="'https://keen-turing-4cb6e4.netlify.com/#/products/'+ data.product._id"
             target="_blank"
             style="color: blue">
-            Veniqa Url
+            jesEcom Url
           </a>
         </b-col>
         <b-col md="3">

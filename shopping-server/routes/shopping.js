@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET Amazon Endpoint. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa Shopping' });
+    res.render('index', { title: 'jesEcom Shopping' });
 });
 
 router.use(passportAuth.isAuthenticated);

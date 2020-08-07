@@ -7,15 +7,15 @@ let dbConnection;
 let getDBConnection = async() => {
     try {
         let connectionOptions = {
-            user: process.env.VENIQA_MONGODB_USER,
-            pass: process.env.VENIQA_MONGODB_PASSWORD,
-            dbName: process.env.VENIQA_MONGODB_DB,
+            user: process.env.jesEcom_MONGODB_USER,
+            pass: process.env.jesEcom_MONGODB_PASSWORD,
+            dbName: process.env.jesEcom_MONGODB_DB,
             useNewUrlParser: config.get('mongodb_settings.use_new_url_parser'),
             useCreateIndex: config.get('mongodb_settings.use_create_index')
         }
 
         // Establish a mongoose connection to mongodb
-        dbConnection = await mongoose.connect(process.env.VENIQA_MONGODB_URL, connectionOptions, (error) => {
+        dbConnection = await mongoose.connect(process.env.jesEcom_MONGODB_URL, connectionOptions, (error) => {
                         if (error) {
                             logger.error("Could not establish connection to database", {meta: error})
                             return;

@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET Catalog Endpoint. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Veniqa Curated Catalog' });
+  res.render('index', { title: 'jesEcom Curated Catalog' });
 });
 
 router.use(passportAuth.isAuthenticated);

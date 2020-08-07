@@ -17,9 +17,9 @@ For the local development, you can utilize Docker in your local machine to do al
 ## Initiate Docker Process
 > Prerequisite: You need Docker installed in your local machine and should have access to `docker-compose`
 
-To install all the necessary components and start your suite of applications, go to **Veniqa** repo.
+To install all the necessary components and start your suite of applications, go to **jesEcom** repo.
 ```
-> cd <Your Path>/Veniqa
+> cd <Your Path>/jesEcom
 ```
 
 Then, start the setup process by running the following command:
@@ -93,7 +93,7 @@ Or duplicate an existing user in mongo `users` collection and replace the `email
 
 The following user with SUPERADMIN privilege is available as default.
 
-**Email:** demo@veniqa.com
+**Email:** demo@jesEcom.com
 
 **Password:** pass$12
 

@@ -5,7 +5,7 @@ import passport from 'passport';
 
 /* GET Amazon Endpoint. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Veniqa Security' });
+    res.render('index', { title: 'jesEcom Security' });
 });
 
 router.route('/login').post(passport.authenticate('login'), securityController.login);

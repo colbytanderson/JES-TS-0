@@ -1,3 +1,3 @@
-## Veniqa Management Server
+## jesEcom Management Server
 
-For Documentation, Refer to [Wiki](https://github.com/Viveckh/Veniqa/wiki).
+For Documentation, Refer to [Wiki](https://github.com/Viveckh/jesEcom/wiki).

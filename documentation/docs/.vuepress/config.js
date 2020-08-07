@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'Veniqa Documentation',
-  description: 'Official Documentation for the Veniqa Open-Source E-commerce Solution',
+  title: 'jesEcom Documentation',
+  description: 'Official Documentation for the jesEcom Open-Source E-commerce Solution',
   themeConfig: {
-    logo: '/img/veniqa_logo_transparent_blue_black.png',
+    logo: '/img/jesEcom_logo_transparent_blue_black.png',
     smoothScroll: true,
     nav: [
-      { text: 'Website', link: 'https://veniqa.com' },
-      { text: 'Github', link: 'https://github.com/Viveckh/Veniqa' }
+      { text: 'Website', link: 'https://jesEcom.com' },
+      { text: 'Github', link: 'https://github.com/Viveckh/jesEcom' }
     ],
     sidebar: [
       ['/', 'Home'],

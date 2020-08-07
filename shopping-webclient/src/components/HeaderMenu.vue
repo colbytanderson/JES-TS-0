@@ -12,12 +12,7 @@
       </button>
 
       <b-navbar-brand to="/">
-        <img
-          src="@/assets/logo_transparent_blue_black.png"
-          alt="VENIQA"
-          width="125px"
-          style="padding: 0.5rem 0rem;"
-        >
+        <p>jesEcom</p>
       </b-navbar-brand>
 
       <b-nav-item class="d-xs-block d-sm-block d-md-none" @click="$emit('openCart')">
@@ -59,7 +54,7 @@
                 @keydown.esc="showSearch = false"
               >
             </transition>
-            <div class="veniqa-nav d-none d-md-block" v-if="!showSearch" style="margin-top: 0.5rem">
+            <div class="jesEcom-nav d-none d-md-block" v-if="!showSearch" style="margin-top: 0.5rem">
               <font-awesome-icon
                 @click="showSearch = true"
                 style="color: rgba(0, 0, 0, 0.5)"
@@ -68,17 +63,17 @@
               />
             </div>
 
-            <b-nav-item @click="openCategory('Women')" class="veniqa-nav d-none d-md-block">Women</b-nav-item>
-            <b-nav-item @click="openCategory('Men')" class="veniqa-nav d-none d-md-block">Men</b-nav-item>
+            <b-nav-item @click="openCategory('Women')" class="jesEcom-nav d-none d-md-block">Women</b-nav-item>
+            <b-nav-item @click="openCategory('Men')" class="jesEcom-nav d-none d-md-block">Men</b-nav-item>
 
             <b-nav-item
-              class="veniqa-nav d-none d-md-block"
+              class="jesEcom-nav d-none d-md-block"
               to="/login"
               v-if="!isSessionActive"
             >Login</b-nav-item>
 
             <b-nav-item-dropdown
-              class="veniqa-nav d-none d-md-block"
+              class="jesEcom-nav d-none d-md-block"
               :text="nameOfUser"
               right
               v-else
@@ -88,8 +83,8 @@
               <b-dropdown-item @click="logoutClicked()">Logout</b-dropdown-item>
             </b-nav-item-dropdown>
             <!-- </b-nav-item> -->
-            <!-- <b-nav-item class="veniqa-nav d-none d-md-block" to="/checkout"> -->
-            <b-nav-item class="veniqa-nav d-none d-md-block" @click="$emit('openCart')">
+            <!-- <b-nav-item class="jesEcom-nav d-none d-md-block" to="/checkout"> -->
+            <b-nav-item class="jesEcom-nav d-none d-md-block" @click="$emit('openCart')">
               <font-awesome-icon icon="shopping-cart" style="font-size: 1.2em"/>
               <b-badge :pill="true" variant="danger">{{totalOrders}}</b-badge>
             </b-nav-item>
@@ -280,7 +275,7 @@ export default {
   transition: margin-right 0.5s;
 }
 
-.veniqa-nav {
+.jesEcom-nav {
   padding: 5px 10px;
   margin-left: 2rem;
   font-weight: bold;

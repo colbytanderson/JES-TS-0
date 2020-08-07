@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET Reference Data Endpoint. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Veniqa Reference Data' });
+  res.render('index', { title: 'jesEcom Reference Data' });
 });
 
 router.use(passportAuth.isAuthenticated);
