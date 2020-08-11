@@ -1,0 +1,11 @@
+# General
+* Redis
+* HAProxy
+* ElasticSearch
+* Logstash
+* Kibana
+* X-Pack
+* GitLab
+* Stripe
+* Docker
+* MariaDB
